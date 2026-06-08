@@ -1,456 +1,483 @@
-﻿{
-    "Version":  4,
-    "Updated":  "2026-06-02",
-    "Signatures":  [
-                       {
-                           "Code":  "ALC",
-                           "ThreatName":  "ALC (BetaCleaner)",
-                           "Family":  "ALC",
-                           "Severity":  "Threat",
-                           "Description":  "ALC / AutodeskLicSerStuckCleanBeta — registers a persistent global and drops scripts into the Max startup folder.",
-                           "Token":  "AutodeskLicSerStuckCleanBeta",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ALC2",
-                           "ThreatName":  "ALC2 (Alpha)",
-                           "Family":  "ALC2",
-                           "Severity":  "Threat",
-                           "Description":  "ALC2 variant — persistent global AutodeskLicSerStuckCleanAlpha.",
-                           "Token":  "AutodeskLicSerStuckCleanAlpha",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ALC3",
-                           "ThreatName":  "ALC3 (Alpha)",
-                           "Family":  "ALC3",
-                           "Severity":  "Threat",
-                           "Description":  "ALC3 variant — persistent global AutodeskLicSerStuckAlpha.",
-                           "Token":  "AutodeskLicSerStuckAlpha",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "CRP",
-                           "ThreatName":  "CRP",
-                           "Family":  "CRP",
-                           "Severity":  "Threat",
-                           "Description":  "CRP / ADSL family — global CRP_BScript. Corrupts settings and spreads to other .max files.",
-                           "Token":  "CRP_BScript",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ADSL",
-                           "ThreatName":  "ADSL",
-                           "Family":  "ADSL",
-                           "Severity":  "Threat",
-                           "Description":  "ADSL family — global ADSL_BScript.",
-                           "Token":  "ADSL_BScript",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "CRP9",
-                           "ThreatName":  "CRP (CRP9_alc)",
-                           "Family":  "CRP",
-                           "Severity":  "Threat",
-                           "Description":  "CRP marker CRP9_alc found in embedded script.",
-                           "Token":  "CRP9_alc",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "PHYSX",
-                           "ThreatName":  "PhysXPluginMfx",
-                           "Family":  "PhysXPluginMfx",
-                           "Severity":  "Threat",
-                           "Description":  "PhysXPluginMfx — ALC2 variant. Global physXCrtRbkInfoCleanBeta. Sends data to C\u0026C servers.",
-                           "Token":  "physXCrtRbkInfoCleanBeta",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ALC_D1",
-                           "ThreatName":  "ALC dropper",
-                           "Family":  "ALC",
-                           "Severity":  "Threat",
-                           "Description":  "Dropper filename vrdematcleanbeta (.ms/.mse/.msex) written to Max startup.",
-                           "Token":  "vrdematcleanbeta",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ALC2_D1",
-                           "ThreatName":  "ALC2 dropper",
-                           "Family":  "ALC2",
-                           "Severity":  "Threat",
-                           "Description":  "Dropper filename vrdematcleanalpha.",
-                           "Token":  "vrdematcleanalpha",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ALC2_D2",
-                           "ThreatName":  "ALC2 dropper",
-                           "Family":  "ALC2",
-                           "Severity":  "Threat",
-                           "Description":  "Dropper filename vrdestermatconvertor.",
-                           "Token":  "vrdestermatconvertor",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ALC2_D3",
-                           "ThreatName":  "ALC2 dropper",
-                           "Family":  "ALC2",
-                           "Severity":  "Threat",
-                           "Description":  "Dropper filename vrdestermatconverter.",
-                           "Token":  "vrdestermatconverter",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ALC2_D4",
-                           "ThreatName":  "ALC2 dropper",
-                           "Family":  "ALC2",
-                           "Severity":  "Threat",
-                           "Description":  "Dropper filename vrdestermatconvertar.",
-                           "Token":  "vrdestermatconvertar",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ALC2_D5",
-                           "ThreatName":  "ALC2 dropper",
-                           "Family":  "ALC2",
-                           "Severity":  "Threat",
-                           "Description":  "Dropper filename vrayimportinfo.",
-                           "Token":  "vrayimportinfo",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ALC3_D1",
-                           "ThreatName":  "ALC3 dropper",
-                           "Family":  "ALC3",
-                           "Severity":  "Threat",
-                           "Description":  "Dropper filename vrdematpropalpha.",
-                           "Token":  "vrdematpropalpha",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "PHYSX_D1",
-                           "ThreatName":  "PhysXPluginMfx dropper",
-                           "Family":  "PhysXPluginMfx",
-                           "Severity":  "Threat",
-                           "Description":  "Dropper filename PhysXPluginStl (.ms/.mse) placed in the Max autoloader.",
-                           "Token":  "PhysXPluginStl",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ABR_1",
-                           "ThreatName":  "Alienbrains (MSCPROP)",
-                           "Family":  "Alienbrains",
-                           "Severity":  "Threat",
-                           "Description":  "Alienbrains / MSCPROP — mscprop.dll dropped into the Max install root.",
-                           "Token":  "mscprop.dll",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ABR_2",
-                           "ThreatName":  "Alienbrains CA",
-                           "Family":  "Alienbrains",
-                           "Severity":  "Threat",
-                           "Description":  "Alienbrains custom-attribute marker PropParameterLocal.",
-                           "Token":  "PropParameterLocal",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ABR_3",
-                           "ThreatName":  "Alienbrains file",
-                           "Family":  "Alienbrains",
-                           "Severity":  "Threat",
-                           "Description":  "Alienbrains dropped file PropertyParametersLocal.mse.",
-                           "Token":  "PropertyParametersLocal",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ALC_D2",
-                           "ThreatName":  "ALC dropper",
-                           "Family":  "ALC",
-                           "Severity":  "Threat",
-                           "Description":  "Dropper/marker vrdemog (vrademog) used by ALC-family spreaders.",
-                           "Token":  "vrdemog",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ALC_D3",
-                           "ThreatName":  "ALC dropper",
-                           "Family":  "ALC",
-                           "Severity":  "Threat",
-                           "Description":  "Dropper file ALC.dlx.",
-                           "Token":  "ALC.dlx",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ADSL_D1",
-                           "ThreatName":  "ADSL dropper",
-                           "Family":  "ADSL",
-                           "Severity":  "Threat",
-                           "Description":  "Dropper file ADSL.dms.",
-                           "Token":  "ADSL.dms",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "CRP_D1",
-                           "ThreatName":  "CRP dropper",
-                           "Family":  "CRP",
-                           "Severity":  "Threat",
-                           "Description":  "CRP cross-scene marker CrossSceneStuff.",
-                           "Token":  "CrossSceneStuff",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "CRP_D2",
-                           "ThreatName":  "CRP marker",
-                           "Family":  "CRP",
-                           "Severity":  "Threat",
-                           "Description":  "CRP scene-stuff marker.",
-                           "Token":  "sceneStuff_",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ABR_4",
-                           "ThreatName":  "Alienbrains file",
-                           "Family":  "Alienbrains",
-                           "Severity":  "Threat",
-                           "Description":  "Alienbrains dropped script Local_temp.",
-                           "Token":  "Local_temp.ms",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ADWARE_1",
-                           "ThreatName":  "Adware injector (znzmo)",
-                           "Family":  "Adware",
-                           "Severity":  "Threat",
-                           "Description":  "Content-injection CA advertising 3d.znzmo.",
-                           "Token":  "3d.znzmo",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ADWARE_2",
-                           "ThreatName":  "Adware injector (znzmo)",
-                           "Family":  "Adware",
-                           "Severity":  "Threat",
-                           "Description":  "znzmo content-injection marker.",
-                           "Token":  "znzmo.com",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ADWARE_3",
-                           "ThreatName":  "Ad CA (3dsmj)",
-                           "Family":  "Adware",
-                           "Severity":  "Suspicious",
-                           "Description":  "Possible AD-Web content-injection custom attribute advertising 3dsmj.",
-                           "Token":  "3dsmj",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "ADWARE_4",
-                           "ThreatName":  "DesireFX CA",
-                           "Family":  "Adware",
-                           "Severity":  "Suspicious",
-                           "Description":  "Possible DesireFX content-injection custom attribute (objects prefixed \u0027desirefx\u0027).",
-                           "Token":  "desirefx",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "SPREAD_HTTP1",
-                           "ThreatName":  "Spreader (HTTP exfiltration)",
-                           "Family":  "Spreader",
-                           "Severity":  "Threat",
-                           "Description":  "Embedded base64 HTTP-POST uploader (B64_strHttpPost) — sends scene/host data to a remote server.",
-                           "Token":  "B64_strHttpPost",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "SPREAD_HTTP2",
-                           "ThreatName":  "Spreader (HTTP exfiltration)",
-                           "Family":  "Spreader",
-                           "Severity":  "Threat",
-                           "Description":  "Embedded HTTP-POST uploader function (fnHttpPost).",
-                           "Token":  "fnHttpPost",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "SPREAD_INJ",
-                           "ThreatName":  "Spreader (file injector)",
-                           "Family":  "Spreader",
-                           "Severity":  "Threat",
-                           "Description":  "Malicious .NET injector class \u0027ManaFileName\u0027 — rewrites files on save to propagate.",
-                           "Token":  "ManaFileName",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ADR_1",
-                           "ThreatName":  "ADR / 3d66 virus",
-                           "Family":  "ADR",
-                           "Severity":  "Threat",
-                           "Description":  "Malicious custom attribute thisADRModel (3d66/ADR spreader).",
-                           "Token":  "thisADRModel",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ADR_2",
-                           "ThreatName":  "ADR / 3d66 virus",
-                           "Family":  "ADR",
-                           "Severity":  "Threat",
-                           "Description":  "Malicious custom attribute thisADRAlert — auto-runs and launches processes.",
-                           "Token":  "thisADRAlert",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "H_ADDS",
-                           "ThreatName":  "Self-spreading callback",
-                           "Family":  "Behaviour",
-                           "Severity":  "Threat",
-                           "Description":  "Scene installs a persistent file callback (callbacks.addScript) — runs on open/save and spreads to other files.",
-                           "Token":  "callbacks.addScript",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_ADDS2",
-                           "ThreatName":  "Self-spreading callback",
-                           "Family":  "Behaviour",
-                           "Severity":  "Threat",
-                           "Description":  "Scene installs a persistent file callback (callbacks.addscript).",
-                           "Token":  "callbacks.addscript",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_HDOS",
-                           "ThreatName":  "Hidden shell command",
-                           "Family":  "Behaviour",
-                           "Severity":  "Threat",
-                           "Description":  "Embedded HiddenDOSCommand — runs an OS command invisibly.",
-                           "Token":  "HiddenDOSCommand",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_DOS",
-                           "ThreatName":  "Shell command",
-                           "Family":  "Behaviour",
-                           "Severity":  "Threat",
-                           "Description":  "Embedded ShellLaunch — launches external programs from the scene.",
-                           "Token":  "ShellLaunch",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_DOS2",
-                           "ThreatName":  "Shell command",
-                           "Family":  "Behaviour",
-                           "Severity":  "Threat",
-                           "Description":  "Embedded DOSCommand — runs an OS command from the scene.",
-                           "Token":  "DOSCommand",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_PROC",
-                           "ThreatName":  "Process launcher",
-                           "Family":  "Behaviour",
-                           "Severity":  "Threat",
-                           "Description":  "Embedded .NET System.Diagnostics.Process — spawns executables / opens URLs.",
-                           "Token":  "System.Diagnostics.Process",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_WSH",
-                           "ThreatName":  "Shell launcher",
-                           "Family":  "Behaviour",
-                           "Severity":  "Threat",
-                           "Description":  "Embedded WScript.Shell COM object — runs OS commands.",
-                           "Token":  "WScript.Shell",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_CMD",
-                           "ThreatName":  "Command prompt",
-                           "Family":  "Behaviour",
-                           "Severity":  "Threat",
-                           "Description":  "Embedded reference to cmd.exe.",
-                           "Token":  "cmd.exe",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_PS",
-                           "ThreatName":  "PowerShell",
-                           "Family":  "Behaviour",
-                           "Severity":  "Threat",
-                           "Description":  "Embedded reference to powershell.",
-                           "Token":  "powershell",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_STARTUP",
-                           "ThreatName":  "Writes to Max startup",
-                           "Family":  "Behaviour",
-                           "Severity":  "Threat",
-                           "Description":  "Embedded script targets the #userStartupScripts folder — self-propagation.",
-                           "Token":  "userStartupScripts",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_TIME",
-                           "ThreatName":  "Auto-run scene script",
-                           "Family":  "Heuristic",
-                           "Severity":  "Suspicious",
-                           "Description":  "Scene registers a time callback (registerTimeCallback) — code that auto-runs on load.",
-                           "Token":  "registerTimeCallback",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_ASM",
-                           "ThreatName":  "Loads .NET assembly",
-                           "Family":  "Heuristic",
-                           "Severity":  "Suspicious",
-                           "Description":  "Embedded dotNet.loadAssembly — loads .NET code at runtime.",
-                           "Token":  "loadAssembly",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_ONLOAD",
-                           "ThreatName":  "Auto-run on scene load",
-                           "Family":  "Heuristic",
-                           "Severity":  "Suspicious",
-                           "Description":  "Custom-attribute \u0027on load do\u0027 handler — code that auto-runs when the scene opens.",
-                           "Token":  "on load do",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_FILEIN",
-                           "ThreatName":  "Loads external script",
-                           "Family":  "Heuristic",
-                           "Severity":  "Suspicious",
-                           "Description":  "Embedded fileIn — pulls in and runs another script file.",
-                           "Token":  "fileIn",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "H_PERSIST",
-                           "ThreatName":  "Persistent global",
-                           "Family":  "Heuristic",
-                           "Severity":  "Suspicious",
-                           "Description":  "Embedded \u0027persistent global\u0027 — survives across scenes; mechanism .max viruses use to spread.",
-                           "Token":  "persistent global",
-                           "AppliesTo":  "MaxSceneOnly"
-                       },
-                       {
-                           "Code":  "PHYSX_NAME",
-                           "ThreatName":  "PhysXPluginMfx",
-                           "Family":  "PhysXPluginMfx",
-                           "Severity":  "Threat",
-                           "Description":  "PhysXPluginMfx family marker (literal name in infected scenes).",
-                           "Token":  "PhysXPluginMfx",
-                           "AppliesTo":  "All"
-                       },
-                       {
-                           "Code":  "ABR_NAME",
-                           "ThreatName":  "Alienbrains (MSCPROP)",
-                           "Family":  "Alienbrains",
-                           "Severity":  "Threat",
-                           "Description":  "MSCPROP / Alienbrains marker.",
-                           "Token":  "MSCPROP",
-                           "AppliesTo":  "All"
-                       }
-                   ]
+{
+  "Version": 5,
+  "Updated": "2026-06-08",
+  "Signatures": [
+    {
+      "Code": "ALC",
+      "ThreatName": "ALC (BetaCleaner)",
+      "Family": "ALC",
+      "Severity": "Threat",
+      "Description": "ALC / AutodeskLicSerStuckCleanBeta \u2014 registers a persistent global and drops scripts into the Max startup folder.",
+      "Token": "AutodeskLicSerStuckCleanBeta",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ALC2",
+      "ThreatName": "ALC2 (Alpha)",
+      "Family": "ALC2",
+      "Severity": "Threat",
+      "Description": "ALC2 variant \u2014 persistent global AutodeskLicSerStuckCleanAlpha.",
+      "Token": "AutodeskLicSerStuckCleanAlpha",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ALC3",
+      "ThreatName": "ALC3 (Alpha)",
+      "Family": "ALC3",
+      "Severity": "Threat",
+      "Description": "ALC3 variant \u2014 persistent global AutodeskLicSerStuckAlpha.",
+      "Token": "AutodeskLicSerStuckAlpha",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "CRP",
+      "ThreatName": "CRP",
+      "Family": "CRP",
+      "Severity": "Threat",
+      "Description": "CRP / ADSL family \u2014 global CRP_BScript. Corrupts settings and spreads to other .max files.",
+      "Token": "CRP_BScript",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ADSL",
+      "ThreatName": "ADSL",
+      "Family": "ADSL",
+      "Severity": "Threat",
+      "Description": "ADSL family \u2014 global ADSL_BScript.",
+      "Token": "ADSL_BScript",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "CRP9",
+      "ThreatName": "CRP (CRP9_alc)",
+      "Family": "CRP",
+      "Severity": "Threat",
+      "Description": "CRP marker CRP9_alc found in embedded script.",
+      "Token": "CRP9_alc",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "PHYSX",
+      "ThreatName": "PhysXPluginMfx",
+      "Family": "PhysXPluginMfx",
+      "Severity": "Threat",
+      "Description": "PhysXPluginMfx \u2014 ALC2 variant. Global physXCrtRbkInfoCleanBeta. Sends data to C\u0026C servers.",
+      "Token": "physXCrtRbkInfoCleanBeta",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ALC_D1",
+      "ThreatName": "ALC dropper",
+      "Family": "ALC",
+      "Severity": "Threat",
+      "Description": "Dropper filename vrdematcleanbeta (.ms/.mse/.msex) written to Max startup.",
+      "Token": "vrdematcleanbeta",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ALC2_D1",
+      "ThreatName": "ALC2 dropper",
+      "Family": "ALC2",
+      "Severity": "Threat",
+      "Description": "Dropper filename vrdematcleanalpha.",
+      "Token": "vrdematcleanalpha",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ALC2_D2",
+      "ThreatName": "ALC2 dropper",
+      "Family": "ALC2",
+      "Severity": "Threat",
+      "Description": "Dropper filename vrdestermatconvertor.",
+      "Token": "vrdestermatconvertor",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ALC2_D3",
+      "ThreatName": "ALC2 dropper",
+      "Family": "ALC2",
+      "Severity": "Threat",
+      "Description": "Dropper filename vrdestermatconverter.",
+      "Token": "vrdestermatconverter",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ALC2_D4",
+      "ThreatName": "ALC2 dropper",
+      "Family": "ALC2",
+      "Severity": "Threat",
+      "Description": "Dropper filename vrdestermatconvertar.",
+      "Token": "vrdestermatconvertar",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ALC2_D5",
+      "ThreatName": "ALC2 dropper",
+      "Family": "ALC2",
+      "Severity": "Threat",
+      "Description": "Dropper filename vrayimportinfo.",
+      "Token": "vrayimportinfo",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ALC3_D1",
+      "ThreatName": "ALC3 dropper",
+      "Family": "ALC3",
+      "Severity": "Threat",
+      "Description": "Dropper filename vrdematpropalpha.",
+      "Token": "vrdematpropalpha",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "PHYSX_D1",
+      "ThreatName": "PhysXPluginMfx dropper",
+      "Family": "PhysXPluginMfx",
+      "Severity": "Threat",
+      "Description": "Dropper filename PhysXPluginStl (.ms/.mse) placed in the Max autoloader.",
+      "Token": "PhysXPluginStl",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ABR_1",
+      "ThreatName": "Alienbrains (MSCPROP)",
+      "Family": "Alienbrains",
+      "Severity": "Threat",
+      "Description": "Alienbrains / MSCPROP \u2014 mscprop.dll dropped into the Max install root.",
+      "Token": "mscprop.dll",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ABR_2",
+      "ThreatName": "Alienbrains CA",
+      "Family": "Alienbrains",
+      "Severity": "Threat",
+      "Description": "Alienbrains custom-attribute marker PropParameterLocal.",
+      "Token": "PropParameterLocal",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ABR_3",
+      "ThreatName": "Alienbrains file",
+      "Family": "Alienbrains",
+      "Severity": "Threat",
+      "Description": "Alienbrains dropped file PropertyParametersLocal.mse.",
+      "Token": "PropertyParametersLocal",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ALC_D2",
+      "ThreatName": "ALC dropper",
+      "Family": "ALC",
+      "Severity": "Threat",
+      "Description": "Dropper/marker vrdemog (vrademog) used by ALC-family spreaders.",
+      "Token": "vrdemog",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ALC_D3",
+      "ThreatName": "ALC dropper",
+      "Family": "ALC",
+      "Severity": "Threat",
+      "Description": "Dropper file ALC.dlx.",
+      "Token": "ALC.dlx",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ADSL_D1",
+      "ThreatName": "ADSL dropper",
+      "Family": "ADSL",
+      "Severity": "Threat",
+      "Description": "Dropper file ADSL.dms.",
+      "Token": "ADSL.dms",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "CRP_D1",
+      "ThreatName": "CRP dropper",
+      "Family": "CRP",
+      "Severity": "Threat",
+      "Description": "CRP cross-scene marker CrossSceneStuff.",
+      "Token": "CrossSceneStuff",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "CRP_D2",
+      "ThreatName": "CRP marker",
+      "Family": "CRP",
+      "Severity": "Threat",
+      "Description": "CRP scene-stuff marker.",
+      "Token": "sceneStuff_",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ABR_4",
+      "ThreatName": "Alienbrains file",
+      "Family": "Alienbrains",
+      "Severity": "Threat",
+      "Description": "Alienbrains dropped script Local_temp.",
+      "Token": "Local_temp.ms",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ADWARE_1",
+      "ThreatName": "Adware injector (znzmo)",
+      "Family": "Adware",
+      "Severity": "Threat",
+      "Description": "Content-injection CA advertising 3d.znzmo.",
+      "Token": "3d.znzmo",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ADWARE_2",
+      "ThreatName": "Adware injector (znzmo)",
+      "Family": "Adware",
+      "Severity": "Threat",
+      "Description": "znzmo content-injection marker.",
+      "Token": "znzmo.com",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ADWARE_3",
+      "ThreatName": "Ad CA (3dsmj)",
+      "Family": "Adware",
+      "Severity": "Suspicious",
+      "Description": "Possible AD-Web content-injection custom attribute advertising 3dsmj.",
+      "Token": "3dsmj",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "ADWARE_4",
+      "ThreatName": "DesireFX CA",
+      "Family": "Adware",
+      "Severity": "Suspicious",
+      "Description": "Possible DesireFX content-injection custom attribute (objects prefixed \u0027desirefx\u0027).",
+      "Token": "desirefx",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "SPREAD_HTTP1",
+      "ThreatName": "Spreader (HTTP exfiltration)",
+      "Family": "Spreader",
+      "Severity": "Threat",
+      "Description": "Embedded base64 HTTP-POST uploader (B64_strHttpPost) \u2014 sends scene/host data to a remote server.",
+      "Token": "B64_strHttpPost",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "SPREAD_HTTP2",
+      "ThreatName": "Spreader (HTTP exfiltration)",
+      "Family": "Spreader",
+      "Severity": "Threat",
+      "Description": "Embedded HTTP-POST uploader function (fnHttpPost).",
+      "Token": "fnHttpPost",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "SPREAD_INJ",
+      "ThreatName": "Spreader (file injector)",
+      "Family": "Spreader",
+      "Severity": "Threat",
+      "Description": "Malicious .NET injector class \u0027ManaFileName\u0027 \u2014 rewrites files on save to propagate.",
+      "Token": "ManaFileName",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ADR_1",
+      "ThreatName": "ADR / 3d66 virus",
+      "Family": "ADR",
+      "Severity": "Threat",
+      "Description": "Malicious custom attribute thisADRModel (3d66/ADR spreader).",
+      "Token": "thisADRModel",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ADR_2",
+      "ThreatName": "ADR / 3d66 virus",
+      "Family": "ADR",
+      "Severity": "Threat",
+      "Description": "Malicious custom attribute thisADRAlert \u2014 auto-runs and launches processes.",
+      "Token": "thisADRAlert",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "SPYCA_1",
+      "ThreatName": "Spy CA (C\u0026C)",
+      "Family": "SpyCA",
+      "Severity": "Threat",
+      "Description": "Spy CA virus \u2014 C\u0026C server api.yutu.cn (exfiltrates data, drops com\\mac.dat).",
+      "Token": "api.yutu.cn",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "SPYCA_2",
+      "ThreatName": "Spy CA (C\u0026C)",
+      "Family": "SpyCA",
+      "Severity": "Threat",
+      "Description": "Spy CA C\u0026C endpoint path blackBox/checkData.",
+      "Token": "blackBox/checkData",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "SPYCA_3",
+      "ThreatName": "Spy CA dropper",
+      "Family": "SpyCA",
+      "Severity": "Threat",
+      "Description": "Spy CA dropped data file com\\mac.dat.",
+      "Token": "com\\mac.dat",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "PHYSX_NAME",
+      "ThreatName": "PhysXPluginMfx",
+      "Family": "PhysXPluginMfx",
+      "Severity": "Threat",
+      "Description": "PhysXPluginMfx family marker (literal name in infected scenes).",
+      "Token": "PhysXPluginMfx",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "ABR_NAME",
+      "ThreatName": "Alienbrains (MSCPROP)",
+      "Family": "Alienbrains",
+      "Severity": "Threat",
+      "Description": "MSCPROP / Alienbrains marker.",
+      "Token": "MSCPROP",
+      "AppliesTo": "All"
+    },
+    {
+      "Code": "H_ADDS",
+      "ThreatName": "Self-spreading callback",
+      "Family": "Behaviour",
+      "Severity": "Threat",
+      "Description": "Scene installs a persistent file callback (callbacks.addScript) \u2014 runs on open/save and spreads to other files.",
+      "Token": "callbacks.addScript",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_ADDS2",
+      "ThreatName": "Self-spreading callback",
+      "Family": "Behaviour",
+      "Severity": "Threat",
+      "Description": "Scene installs a persistent file callback (callbacks.addscript).",
+      "Token": "callbacks.addscript",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_HDOS",
+      "ThreatName": "Hidden shell command",
+      "Family": "Behaviour",
+      "Severity": "Threat",
+      "Description": "Embedded HiddenDOSCommand \u2014 runs an OS command invisibly.",
+      "Token": "HiddenDOSCommand",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_DOS",
+      "ThreatName": "Shell command",
+      "Family": "Behaviour",
+      "Severity": "Threat",
+      "Description": "Embedded ShellLaunch \u2014 launches external programs from the scene.",
+      "Token": "ShellLaunch",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_DOS2",
+      "ThreatName": "Shell command",
+      "Family": "Behaviour",
+      "Severity": "Threat",
+      "Description": "Embedded DOSCommand \u2014 runs an OS command from the scene.",
+      "Token": "DOSCommand",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_PROC",
+      "ThreatName": "Process launcher",
+      "Family": "Behaviour",
+      "Severity": "Threat",
+      "Description": "Embedded .NET System.Diagnostics.Process \u2014 spawns executables / opens URLs.",
+      "Token": "System.Diagnostics.Process",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_WSH",
+      "ThreatName": "Shell launcher",
+      "Family": "Behaviour",
+      "Severity": "Threat",
+      "Description": "Embedded WScript.Shell COM object \u2014 runs OS commands.",
+      "Token": "WScript.Shell",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_CMD",
+      "ThreatName": "Command prompt",
+      "Family": "Behaviour",
+      "Severity": "Threat",
+      "Description": "Embedded reference to cmd.exe.",
+      "Token": "cmd.exe",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_PS",
+      "ThreatName": "PowerShell",
+      "Family": "Behaviour",
+      "Severity": "Threat",
+      "Description": "Embedded reference to powershell.",
+      "Token": "powershell",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_STARTUP",
+      "ThreatName": "Writes to Max startup",
+      "Family": "Behaviour",
+      "Severity": "Threat",
+      "Description": "Embedded script targets the #userStartupScripts folder \u2014 self-propagation.",
+      "Token": "userStartupScripts",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_TIME",
+      "ThreatName": "Auto-run scene script",
+      "Family": "Heuristic",
+      "Severity": "Suspicious",
+      "Description": "Scene registers a time callback (registerTimeCallback) \u2014 code that auto-runs on load.",
+      "Token": "registerTimeCallback",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_ASM",
+      "ThreatName": "Loads .NET assembly",
+      "Family": "Heuristic",
+      "Severity": "Suspicious",
+      "Description": "Embedded dotNet.loadAssembly \u2014 loads .NET code at runtime.",
+      "Token": "loadAssembly",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_ONLOAD",
+      "ThreatName": "Auto-run on scene load",
+      "Family": "Heuristic",
+      "Severity": "Suspicious",
+      "Description": "Custom-attribute \u0027on load do\u0027 handler \u2014 code that auto-runs when the scene opens.",
+      "Token": "on load do",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_FILEIN",
+      "ThreatName": "Loads external script",
+      "Family": "Heuristic",
+      "Severity": "Suspicious",
+      "Description": "Embedded fileIn \u2014 pulls in and runs another script file.",
+      "Token": "fileIn",
+      "AppliesTo": "MaxSceneOnly"
+    },
+    {
+      "Code": "H_PERSIST",
+      "ThreatName": "Persistent global",
+      "Family": "Heuristic",
+      "Severity": "Suspicious",
+      "Description": "Embedded \u0027persistent global\u0027 \u2014 survives across scenes; mechanism .max viruses use to spread.",
+      "Token": "persistent global",
+      "AppliesTo": "MaxSceneOnly"
+    }
+  ]
 }
