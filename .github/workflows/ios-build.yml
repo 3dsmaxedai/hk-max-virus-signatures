@@ -1,0 +1,45 @@
+name: iOS build
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "ios/**"
+      - "signatures.json"
+      - ".github/workflows/ios-build.yml"
+  pull_request:
+    paths:
+      - "ios/**"
+      - "signatures.json"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build (iOS Simulator)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode 16
+        run: sudo xcode-select -switch /Applications/Xcode_16.app
+
+      - name: Show toolchain
+        run: xcodebuild -version
+
+      - name: Verify bundled signatures.json is in sync
+        run: |
+          if ! diff -q signatures.json ios/MaxVirusScanner/signatures.json >/dev/null; then
+            echo "::error::ios/MaxVirusScanner/signatures.json differs from root signatures.json. Run: cp signatures.json ios/MaxVirusScanner/signatures.json"
+            exit 1
+          fi
+
+      - name: Build for simulator
+        working-directory: ios
+        run: |
+          xcodebuild \
+            -project MaxVirusScanner.xcodeproj \
+            -scheme MaxVirusScanner \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            build
