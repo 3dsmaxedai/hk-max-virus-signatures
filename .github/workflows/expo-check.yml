@@ -1,0 +1,42 @@
+name: Expo check
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "expo/**"
+      - "signatures.json"
+      - ".github/workflows/expo-check.yml"
+  pull_request:
+    paths:
+      - "expo/**"
+      - "signatures.json"
+  workflow_dispatch:
+
+jobs:
+  typecheck:
+    name: Type-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: expo/package-lock.json
+
+      - name: Verify bundled signatures.json is in sync
+        run: |
+          if ! diff -q signatures.json expo/src/data/signatures.json >/dev/null; then
+            echo "::error::expo/src/data/signatures.json differs from root signatures.json. Run: cp signatures.json expo/src/data/signatures.json"
+            exit 1
+          fi
+
+      - name: Install dependencies
+        working-directory: expo
+        run: npm install
+
+      - name: TypeScript type-check
+        working-directory: expo
+        run: npx tsc --noEmit
